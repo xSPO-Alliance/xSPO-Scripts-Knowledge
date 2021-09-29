@@ -7,6 +7,7 @@ Link collection of all educational content and tools which have been created by 
 
 ### Delegators Know How
 Delegator Guide: https://cardano-staking.at/en/how-to-select-a-cardano-stakepool
+
 Delegator Exam: https://forum.cardano.org/t/exam-delegator/65990
 
 
