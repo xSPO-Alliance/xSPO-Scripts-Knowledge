@@ -30,6 +30,7 @@ Avoid missing slots by configuration: https://forum.cardano.org/t/no-more-missed
 TIP Reporting to Healtchecks IO: https://github.com/ResponsibleStaking/Cardano-SPO-Scripts
 
 ### Grafana Dashboard
+Installation tutorial and sample dashboard: https://www.panl.org/dashboards
 
 ### Failover Script
 Failover based on external availabiltiy monitoring: https://github.com/ResponsibleStaking/Cardano-Heartbeat-Failover
