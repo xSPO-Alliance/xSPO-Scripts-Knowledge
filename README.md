@@ -1,8 +1,22 @@
-# Introduction (xSPO cares about spo education and sharing knowledge, ...)
+# Introduction 
 
 Link collection of all educational content and tools which have been created by xSPO Members.
 
-## Recommended Configurations (missed slots topic, ...)
+## Recommended Configurations
 
-## Operational Scripts (Monitoring, Dashboards, Failover, ...)
-## Tools (NFT minting, ...)
+### Missed Slots
+
+
+
+## Operational Scripts
+
+### Monitoring
+
+### Grafana Dashboard
+
+### Failover Script
+
+
+## Tools
+
+### NFT Minting Scripts
