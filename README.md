@@ -13,7 +13,9 @@ Delegator Exam: https://forum.cardano.org/t/exam-delegator/65990
 
 ### SPO Know How
 SPO Guide: https://cardano-staking.at/en/plan-cardano-stakepool-guide
+
 SPO Exam: https://forum.cardano.org/t/exam-stake-pool-operator/63112
+
 Understand Rewards Flow: https://forum.cardano.org/t/understanding-rewards-flow-and-how-it-will-change-over-time/68602
 
 ## Recommended Configurations
