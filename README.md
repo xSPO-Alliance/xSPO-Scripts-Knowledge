@@ -23,6 +23,8 @@ Understand Rewards Flow: https://forum.cardano.org/t/understanding-rewards-flow-
 ### Missed Slots
 Avoid missing slots by configuration: https://forum.cardano.org/t/no-more-missed-slots-during-epoch-after-changing-one-setting/67924/10
 
+### Installation
+Validate Cardano Node installation: https://github.com/sadaka-io/cardano-node-sanity-checks/
 
 ## Operational Scripts
 
