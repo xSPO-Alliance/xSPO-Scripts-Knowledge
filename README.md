@@ -45,3 +45,5 @@ Failover based on external availabiltiy monitoring: https://github.com/Responsib
 ### ADA and Native Tokens Payment Scripts
 Transfer ADA and Native Tokens from multiple addresses to multiple addresses: https://github.com/cardano-apexpool/payments
 
+### Ansible playbook for provisioning a Cardano stake pool
+Manage the stake pool nodes using ansible: https://github.com/moaipool/ansible-cardano-node
