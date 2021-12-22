@@ -42,6 +42,9 @@ Failover based on external availabiltiy monitoring: https://github.com/Responsib
 
 ## Tools
 
+### Check Scheduled blocks without a Node
+https://github.com/asnakep/ScheduledBlocks
+
 ### NFT Minting Scripts
 
 ### ADA and Native Tokens Payment Scripts
