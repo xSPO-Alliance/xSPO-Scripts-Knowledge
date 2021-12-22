@@ -35,7 +35,7 @@ TIP Reporting to Healtchecks IO: https://github.com/ResponsibleStaking/Cardano-S
 
 ### Grafana Dashboard
 Installation tutorial and sample dashboard: https://www.panl.org/dashboards
-    - V2: https://panl-stake-pool.gitbook.io/grafana-monitoring-setup-for-cardano-stake-pool/
+   - V2: https://panl-stake-pool.gitbook.io/grafana-monitoring-setup-for-cardano-stake-pool/
 
 ### Failover Script
 Failover based on external availabiltiy monitoring: https://github.com/ResponsibleStaking/Cardano-Heartbeat-Failover
