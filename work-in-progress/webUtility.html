@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://static.adapools.org/assets/widget-dark.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			//enter your pool ID
+			var poolID="05e11c24a4de15366c6d548f8847589164d02260b6a059a08c22be2a";
+
+			//get data from adapools
+			var url = "https://js.adapools.org/pools/" + poolID + "/summary.json";
+			
+			var apSummary = $.getJSON(url, function(data) { 
+				$.each( data.data, function( i, val ) { 
+						a=new Array('tax_fix','pledge','total_stake');
+						if(a.includes(i))  val=Math.round(parseInt(val)/1000000);
+						if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
+
+						$(i).html(val).text();   
+				}); 
+				return data.data.responseText;
+			});
+			
+			//static links to alliance websites and images
+			var xSPO='<a href="https://xspo-alliance.org/discord" target="https://xspo-alliance.org/discord"><img src="https://infura-ipfs.io/ipfs/QmTApgXF7oHyQpozsMoSwAUA2VTC93iLfsysUKQNqFrvDC" width="170" class="p-2"></a>'
+			var cspa='<a href="https://singlepoolalliance.net" target="https://singlepoolalliance.net"><img src="https://github.com/SinglePoolAlliance/singlepoolalliance.github.io/blob/master/assets/img/spa%20logo.png?raw=true" width="170" class="p-2"></a>'
+			var cmdp='<a href="https://missiondrivenpools.org" target="https://missiondrivenpools.org"><img src="https://github.com/CardanoMDP/assets/blob/1cae61acddbeb2c74358f2419ba5f94bb908687d/CardanoMDP-png.png?raw=true" width="170" class="p-2"></a>'
+			
+			//enter your relevant alliances in variable format above
+			var alliances=xSPO + cspa + cmdp
+			
+			window.onload = function() {
+					var apSum = apSummary.responseJSON.data;
+					var logo = '<a href="'+apSum.db_url+'" target="'+apSum.db_url+'"><img src="'+apSum.handles.icon+'" width="170" class="p-2"></a>'
+					console.log(apSum);
+					document.getElementById("alliancesLink").innerHTML=alliances+logo;
+					document.getElementById("pLink").innerHTML="[" + apSum.db_ticker + "] " + apSum.db_name;
+					document.getElementById("pLink").href = apSum.db_url;
+					document.getElementById("pLink").target = apSum.db_url;
+					document.getElementById("idLink").innerHTML=apSum.pool_id + "--ADApools.org Link";
+					document.getElementById("idLink").href = "https://adapools.org/pool/"+apSum.pool_id;
+					document.getElementById("roaLifeLink").innerHTML=apSum.roa_lifetime + "%";
+					//document.getElementById("delegatorLink").innerHTML=apSum.delegators;				
+					document.getElementById("tStakeLink").innerHTML=((apSum.total_stake/1000000));
+					document.getElementById("pledgeLink").innerHTML=((apSum.pledge/1000000.0).toPrecision(6));
+					document.getElementById("aStakeLink").innerHTML=(apSum.active_stake/1000000);
+					document.getElementById("blocksEpochLink").innerHTML=apSum.blocks_epoch;
+					document.getElementById("blocksLifeLink").innerHTML=apSum.blocks_lifetime;
+					document.getElementById("costsLink").innerHTML=((apSum.tax_fix / 1000000 ).toPrecision(6)) + "+" + ((apSum.tax_ratio * 100).toPrecision(2)) + "%";
+					document.getElementById("footerLink").innerHTML=apSum.db_description;
+			}
+		</script>
+		<style type="text/css">
+			td { white-space: nowrap; }
+		</style>
+	</head>
+
+	<body class="bg-black">
+		<div> <h2>SMASH SERVER PROVIDED BY</h2></div>
+		<div class="col-12" id="alliancesLink">Pool Alliances Header</div>
+		<div class="card">
+			<div class="card-header">
+				<a id="pLink" href="" target=""> Pool </a><br />
+				<p class="text-muted small"><a id="idLink" href="">ADApoolsLink</a></p>
+				<div id="line"> Lifetime ROA (return on ₳): <span id="roaLifeLink"></span></div>
+			</div>
+			<div class="card-body">
+				<table class=col-12>
+					<tr>
+						<td>Active Stake:</td><td class=text-right id=x0><span id="aStakeLink"></span></td><td style="width:30px"></td>
+						<td>Blocks in Epoch:</td><td class=text-right id=x1><span id="blocksEpochLink"></span></td>
+					</tr>
+					<tr>
+						<td>Live Stake:</td><td class=text-right id=x2><span id="tStakeLink"></span></td><td></td>
+						<td>Blocks Lifetime:</td><td class=text-right id=x3><span id="blocksLifeLink"></span></td>
+					</tr>
+					<tr>
+						<td>Pledge</td><td class=text-right id=x4><span id="pledgeLink"></span></td><td></td>
+						<td>Costs</td><td class=text-right id=x5><span id="costsLink"></span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="card-footer"><span id="footerLink"></div>
+		</div>
+	</body>
+</html>
