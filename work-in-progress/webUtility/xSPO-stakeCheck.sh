@@ -1,7 +1,7 @@
 alliance="eXtra Small Pool Operators (xSPO)"
 url="https://raw.githubusercontent.com/xSPO-Alliance/adapools-xspo-alliance/main/xspo-alliance-members.json"
 TOTAL_STAKE=0
-pools=`curl $ALLIANCE_REGISTRY_URL --silent | jq -r '.adapools.members' | jq -r '.[].pool_id'`
+pools=`curl $url --silent | jq -r '.adapools.members' | jq -r '.[].pool_id'`
 
 for epoch in {309..312}
 do
