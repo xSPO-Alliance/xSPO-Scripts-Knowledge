@@ -39,7 +39,7 @@ Installation tutorial and sample dashboard: https://www.panl.org/dashboards
 
 ### Failover Script
 Failover based on external availabiltiy monitoring: https://github.com/ResponsibleStaking/Cardano-Heartbeat-Failover
-
+Simple failover: https://github.com/ResponsibleStaking/Cardano-Simple-Failover
 
 ## Tools
 
